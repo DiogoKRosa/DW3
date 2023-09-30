@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            overflow: hidden;
+
+        }
+        .wrapper{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .campo{
+            display:grid;
+            grid-template-areas: 
+            "a b"
+            "c d";
+            row-gap: 20px;
+            column-gap: 5px;
+        }
+        .operacao{
+            padding-top: 20px;
+            display: grid;
+            grid-template-areas: "a b" "c d";
+            gap: 5px;
+        }
+        .resultado{
+            margin-top: 20px;
+            width: 100%;
+            height: 30px;
+            font: 24px Arial;
+            text-align: center;
+            background-color: #f3f3f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calculadora">
+            <div class="campo">
+                <label for="n1">Input 1: </label>
+                <input type="number" id="num1">
+                <label for="n2">Input 2: </label>
+                <input type="number" id="num2">
+            </div>
+            <div class="operacao">
+                <button id="adicao">+</button>
+                <button id="subtracao">-</button>
+                <button id="multiplicacao">x</button>
+                <button id="divisao">÷</button>
+            </div>
+            <div class="resultado"></div>
+        </div>
+    </div>
+    <script>
+        var n1, n2
+        var res = window.document.querySelector(".resultado")
+
+        const adicao = window.document.querySelector("#adicao")
+        const subtr = window.document.querySelector("#subtracao")
+        const multi = window.document.querySelector("#multiplicacao")
+        const divisao = window.document.querySelector("#divisao")
+
+        selecionar = ()=>{
+            n1 = +window.document.getElementById("num1").value
+            n2 = +window.document.getElementById("num2").value
+        }
+
+        adicao.addEventListener("click", ()=>{
+            selecionar()
+            var result = n1 + n2
+            res.innerHTML = result
+        })
+        subtr.addEventListener("click", ()=>{
+            selecionar()
+            var result = n1 - n2
+            res.innerHTML = result
+        })
+        multi.addEventListener("click", ()=>{
+            selecionar()
+            var result = n1 * n2
+            res.innerHTML = result
+        })
+        divisao.addEventListener("click", ()=>{
+            selecionar()
+            var result = n1 / n2
+            res.innerHTML = result
+        })
+    </script>
+</body>
+</html>

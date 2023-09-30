@@ -1,0 +1,29 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores relacionais e ternários</title>
+    <style>
+        body{
+            background-color: #282828;
+            color: #f1f1f1;
+            font: normal 20pt Arial;
+        }
+        h3{
+            color:#edd446;
+        }
+        strong{
+            color:#edd446;
+        }
+    </style>
+</head>
+<body>
+    <h3>Operadores Relacionais e Ternário em Javascript</h3>
+    <script>
+        var ano = +window.prompt("Qual ano que você nasceu?");
+
+
+        resultado = ano >= 2000? 'Você nasceu após do segundo milênio': 'Você nasceu antes do segundo milênio';
+        document.write(`<strong>${resultado}</strong>`);
+    </script>
+</body>
+</html>

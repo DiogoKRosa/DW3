@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <div>
+        <h2>Contador de Números</h2>
+        <label for="inicio">Valor inicial:</label>
+        <input type="number" id="inicio">
+        <label for="final">Valor final:</label>
+        <input type="number" id="final">
+        <input type="button" id="btn" value="Gerar">
+        <div id="res"></div>
+    </div>
+    <script>
+        gerar = () =>{
+            var res = window.document.querySelector("div#res")
+            var inicio = +window.document.querySelector("input#inicio").value
+            var final = +window.document.querySelector("input#final").value
+
+            for(i=inicio; i<=final; i++){
+                if(i==final){
+                    res.innerHTML += i
+                    continue
+                }
+                res.innerHTML += i + ","
+            }
+        } 
+
+        window.document.getElementById("btn").addEventListener("click", gerar)
+    </script>
+</body>
+</html>

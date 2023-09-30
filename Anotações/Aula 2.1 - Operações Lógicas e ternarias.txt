@@ -1,0 +1,22 @@
+Operadores relacionais 
+> Maior
+< Menor
+>= Maior ou igual
+<= Menor ou igual
+!= Diferente
+
+Operadores relacionais de identidade
+== Identifica o valor
+=== Identifica o valor e o tipo
+
+!= Identifica o valor
+!== Identifica o valor e o tipo
+
+
+Operadores Lógicos
+! NOT 
+&& AND
+// OR
+
+Operadores Ternários
+teste ? true : false

@@ -1,0 +1,32 @@
+s.length - retorna a quantidade de caracteres
+s.toUpperCase()
+s.toLowerCase()
+
+n.toFixed(n) - coloca o n casas decimais no numero
+n.toFixed().replace('.', ',') - coloca n casas decimais e troca o ponto decimal para virgula
+n.toLocaleString('pt-br', {style: 'currency', currency:'BRL/USD/EUR'}) - 
+
+aritmeticos
++(soma) x+=
+-(subtração) x-=
+*(multiplicação) x*=
+/(divisão) x/=
+%(resto) x%=
+**(potência) x**=
+
+pós incremento
+x++
+pós decremento
+x--
+
+pré incremento
+++x
+pré decremento
+--x
+
+atribuição
+
+
+relacionais
+lógicos
+ternário

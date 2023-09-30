@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores relacionais e ternários</title>
+    <style>
+        body{
+            background-color: #282828;
+            color: #f1f1f1;
+            font: normal 20pt Arial;
+        }
+        h3{
+            color:#edd446;
+        }
+        strong{
+            color:#edd446;
+        }
+    </style>
+</head>
+<body>
+    <h3>Operadores Relacionais e Ternário em Javascript</h3>
+    <script>
+        var nome = window.prompt("Qual é seu nome?");
+        var idade = window.prompt("Qual é a sua idade?");
+        var hobby = window.prompt("Qual é o seu hobby?");
+        var ano = +window.prompt("Qual ano que você nasceu?");
+
+        document.write(`Olá! <strong>${nome}</strong>.`);
+        var resultado = idade<18?'menor':'maior';
+        document.write(`<br>Você é <strong>${resultado}</strong> de idade.`);
+
+        resultado = hobby.toLowerCase() != 'estudar'? 'Não seria melhor estudar?': 'Você vai longe!';
+        document.write(`<br>O seu hobby é <strong>${hobby.toLowerCase()}</strong>. ${resultado}`);
+
+        
+        resultado = ano >= 2000? 'Você nasceu após do segundo milênio': 'Você nasceu antes do segundo milênio';
+        document.write(`<br><strong>${resultado}</strong>`);
+    </script>
+</body>
+</html>

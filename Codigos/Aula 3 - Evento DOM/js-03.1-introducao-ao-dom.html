@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body{
+            background-color: #447dc7;
+            color: #f1f1f1;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM.</h1>
+    <p>Aprendendo a usar o <strong>DOM</strong> em javascript.</p>
+    <p>Eu sou um parágrafo.</p>
+
+    <div id = "msg">Eu sou uma div</div>
+    <div name = "msg">Eu sou uma div</div>
+    <div class = "msg">Eu sou uma div</div>
+    <div id = "msg2">Eu sou uma div</div>
+
+    <script>
+        //Selecionando elementos por Tag, selecinando o primeiro elemento
+        var p0 = window.document.getElementsByTagName('p')[0]
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('<br>No 1° parágrafo etá escrito assim: ' + p0.innerHTML)
+        window.document.write('<br>No 2° parágrafo etá escrito assim: ' + p0.innerText)
+
+        var corpo = window.document.body
+        corpo.style.background = '#2f2f2f'
+        p0.style.color = 'yellow'
+
+        //Selecionando elementos por ID
+        var d = window.document.getElementById('msg')
+        d.innerText = 'Selecionando elementos pelo ID'
+        d.style.background = 'purple'
+
+        //Selecionando por nome
+        var d1 = window.document.getElementsByName('msg')[0]
+        d1.innerText = 'Selecionando elementos pelo NAME'
+        d1.style.background = 'blue'
+
+        //Selecionando por classe
+        var d2 = window.document.getElementsByClassName('msg')[0]
+        d2.innerText = 'Selecionando elementos pela CLASSE'
+        d2.style.background = 'red'
+
+        //Selecionando por query
+        var d3 = window.document.querySelector('div#msg2')
+        d3.innerText = 'Selecionando elemento pelo SELECTOR'
+        d3.style.background = 'yellow'
+        d3.style.color='black'
+    </script>
+</body>
+</html>

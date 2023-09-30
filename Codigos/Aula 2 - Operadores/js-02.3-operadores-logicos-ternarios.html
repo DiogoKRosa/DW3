@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos e ternários</title>
+    <style>
+        body{
+            background-color: #282828;
+            color: #f1f1f1;
+            font: normal 20pt Arial;
+        }
+        h3{
+            color:#edd446;
+        }
+        strong{
+            color:#edd446;
+        }
+    </style>
+</head>
+<body>
+    <h3>Operadores Lógicos e Ternário em Javascript</h3>
+    <script>
+        var ano = +window.prompt('Digite a série do aluno (1 a 9):');
+        var resultado = ano == 1 || ano == 9? 'VERMELHA' : 'AZUL';
+        document.write(`Categoria do aluno: <strong>${resultado}</strong>`);
+
+        var media = +window.prompt('Digite a média do aluno:');
+        resultado = media>= 4 && media <=5.5?'fará':'não fará';
+        document.write(`<br>Esse aluno <strong>${resultado}</strong> recuperação, pois teve média <strong>${media}</strong>.`)
+    </script>
+</body>
+</html>

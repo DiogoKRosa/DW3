@@ -1,0 +1,10 @@
+npm -v => vê a versão do npm
+npm init => inicia o npm
+npm install <package> --save => instala o modelo e salva no pacote
+
+npm install express --save
+npm install ejs --save
+
+node index.js => inicia o arquivo desejado no servidor
+
+app.route?

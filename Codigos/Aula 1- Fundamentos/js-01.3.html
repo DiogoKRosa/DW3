@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis e concatenação</title>
+    <style>
+        body{
+            background-color: #282828;
+            color: #f1f1f1;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color:#edd446;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos no Javascript...</h1>
+    Eu sou...
+
+    <script>
+        //alert()-> funciona também
+        // window.alert('Iniciando os estudos no Javascript');
+        // window.confirm('Vamos começar?');
+        var nome = window.prompt('Qual o seu nome?');
+        var idade = window.prompt('Qual o seu idade?');
+        var hobby = window.prompt('Qual o você curte?');
+
+        document.write(nome + ', tenho ' + idade + ' anos e curto ' + hobby);
+
+        document.write(`<br><strong>${nome}</strong>, tenho ${idade} anos e curto ${hobby}.`)
+
+    </script>
+</body>
+</html>

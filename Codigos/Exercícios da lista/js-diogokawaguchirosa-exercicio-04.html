@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alguel de carros</title>
+</head>
+<body>
+        <div>
+                <h2>Calcular Aluguel de Carro</h2>
+                <div>
+                    <p>Selecione o modelo desejado: </p>
+                    <input type="radio" name="modelo">Hatch
+                    <input type="radio" name="modelo"> Sedã
+                    <input type="radio" name="modelo"> Esportivo
+                    <br>
+                    <p>Digite a quantidades de dias que deseja alugar:</p>
+                    <input type="number" name="dias" id="dias">
+                    <input type="button" value="calcular" class="btn" onclick="calcular()">
+                </div>
+                <div id="res"></div>
+        </div>
+        <script>
+            var res = window.document.querySelector('div#res')
+            calcular = ()=>{
+                var dias = +window.document.querySelector("input#dias").value
+                var modelo = window.document.getElementsByName("modelo")
+
+                if(modelo[0].checked){
+                    var tipo = "Hatch"
+                    var aluguel = 80
+                }else if(modelo[1].checked){
+                    var tipo = "Sedã"
+                    var aluguel = 100
+                }else if(modelo[2].checked){
+                    var tipo = "Esportivo"
+                    var aluguel = 300
+                }else{
+                    res.innerHTML = "Escolha umas das opções acima"
+                    return false
+                }
+                res.innerHTML = `O modelo escolhido foi ${tipo} e custará um total de R$${aluguel*dias} para alugar por ${dias} dias`
+            }
+        </script>
+</body>
+</html>

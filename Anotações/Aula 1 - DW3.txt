@@ -1,0 +1,35 @@
+Identificadores de variáveis:
+
+Identificadores podem começar com letras, $ ou _ : nome, $nome, _nome;
+Não podem começar com números;
+É possivel usar letras ou números;
+É possível usar acentos;
+Não podem conter espaços;
+Maiúsculas e minúsculas fazem diferença;
+Para variáveis com mais de uma palavra, use o padrão camelCase;
+Não podem ser palavras reservadas (ex.:var, function, alert, etc...);
+
+
+Para definir variáveis podemos usar var, let const;
+var: pode ter o seu valor retribuído. Pode ser redeclarado. - Escopo Global e local.
+let:Pode ter o seu valor reatribuido. Não pode ser redeclarado. -Escopo Global, local e de bloco.
+const:Não pode ter o seu valor reatribuído. Não pode ser redeclarado. -Escopo Global, local e de bloco.
+
+Tipos de variaveis:
+number - infinity, NaN(Not a Number)
+string
+boolean
+null
+undefined
+object - Array
+function
+
+typeof - pega o tipo da variavel
+
+Concatenação
+Para juntarmos o conteúdo de um texto basta utilizar '' ou "" juntamente com o + variavel.
+var msg = 'Oi me chamo' + usuario;
+
+templateString - a crase(`) permite utilizar variaveis dentro da String.
+var msg = `Oi, me chamo ${usuario}`;
+
