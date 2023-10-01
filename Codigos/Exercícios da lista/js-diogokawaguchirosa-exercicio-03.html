@@ -6,15 +6,17 @@
     <title>Calculadora</title>
     <style>
         body{
-            overflow: hidden;
-
+            overflow: hidden; 
+            font: 1.2rem normal Sans-Serif;
+            background-color: #282828;
+            color: #f1f1f1;
         }
         .wrapper{
-            width: 100vw;
-            height: 100vh;
+            margin-top: 100px;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
         .campo{
@@ -31,18 +33,37 @@
             grid-template-areas: "a b" "c d";
             gap: 5px;
         }
+        input{
+            border: solid #edd446 1px;
+            font: 1.2rem;
+            color: #edd446;
+            background-color: #282828;
+            font-weight:bold;
+            text-align: center;
+        }
         .resultado{
             margin-top: 20px;
             width: 100%;
             height: 30px;
             font: 24px Arial;
             text-align: center;
-            background-color: #f3f3f3;
+            background-color: #282828;
+        }
+        button{
+            font-size: 1.2rem;
+            background-color: #edd446;
+            color: #282828;
+            height: 50px;
+            border: none;
+        }
+        button:hover{
+            background-color: #d6bf3f;
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
+        <h2>Calculadora</h2>
         <div class="calculadora">
             <div class="campo">
                 <label for="n1">Input 1: </label>
@@ -56,6 +77,8 @@
                 <button id="multiplicacao">x</button>
                 <button id="divisao">÷</button>
             </div>
+            <br>
+            <p>Resultado:</p>
             <div class="resultado"></div>
         </div>
     </div>

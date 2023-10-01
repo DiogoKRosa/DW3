@@ -3,22 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alguel de carros</title>
+    <title>Aluguel de carros</title>
+    <style>
+        body{
+            font: 1.2rem normal Sans-Serif;
+            background-color: #282828;
+            color: #f1f1f1;
+        }
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;   
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .card{
+            width: 450px;
+            height: 600px;
+            background-color: #282828;
+            padding: 50px;
+            border-radius: 50px;
+        }
+        .grid2-3{
+            display: grid;
+            grid-template-areas: 
+            "a b c"
+            "d e f";
+            column-gap: 20px;
+            align-items: center;
+        }
+        .form{
+            display: grid;
+            row-gap: 10px;
+        }
+        label{
+            display: grid;  
+        }
+        .grid2-3 input{
+            position: relative;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .radio{
+            position: relative;
+            margin-top: 2px;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #282828;
+            outline: #edd446 2px solid;
+            outline-offset: 3px;
+            border-radius: 50%;
+            justify-self: center;
+        }
+        label:hover input ~ .radio {
+          background-color: #ccc;
+        }
+        label input:checked ~ .radio {
+          background-color: #edd446;
+        }
+        .radio:after {
+          content: "";
+          position: relative;
+          display: none;
+        }
+        label input:checked ~ .radio:after {
+          display: block;
+        }
+
+        input[type="number"]{
+            border: solid #edd446 1px;
+            height: 30px;
+            font: 1.2rem;
+            color: #edd446;
+            background-color: #282828;
+            font-weight:bold;
+            text-align: center;
+        }
+        input[type="number"]:focus{
+            outline-color: #edd446;
+        }
+        .btn{
+            font-size: 1.2rem;
+            background-color: #edd446;
+            color: #282828;
+            height: 50px;
+            border: none;
+        }
+        .btn:hover{
+            background-color: #d6bf3f;
+        }
+    </style>
 </head>
 <body>
-        <div>
-                <h2>Calcular Aluguel de Carro</h2>
-                <div>
-                    <p>Selecione o modelo desejado: </p>
-                    <input type="radio" name="modelo">Hatch
-                    <input type="radio" name="modelo"> Sedã
-                    <input type="radio" name="modelo"> Esportivo
+        <div class="wrapper">
+            <div class="card">
+                <h2>Calcular Aluguel de Carros</h2>
+                <div class="form">
+                    <p>Selecione o modelo desejado e insira a quantidade de dias: </p>
+                    <div class="grid2-3">
+                        <label>Hatch
+                            <input type="radio" name="modelo">
+                            <span class="radio"></span>
+                        </label>
+                        <label>Sedã
+                            <input type="radio" name="modelo">
+                            <span class="radio"></span>
+                        </label>
+                        <label>Esportivo
+                            <input type="radio" name="modelo">
+                            <span class="radio"></span>
+                        </label>
+                    </div>
                     <br>
-                    <p>Digite a quantidades de dias que deseja alugar:</p>
-                    <input type="number" name="dias" id="dias">
-                    <input type="button" value="calcular" class="btn" onclick="calcular()">
-                </div>
+                    <input type="number" name="dias" id="dias" placeholder="Dias">
+                    <input type="button" value="Calcular" class="btn" onclick="calcular()">
+                </div><br>
                 <div id="res"></div>
+            </div>
         </div>
         <script>
             var res = window.document.querySelector('div#res')

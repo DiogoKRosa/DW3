@@ -4,32 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador</title>
+    <style>
+        body{
+            font: 1.2rem normal Sans-Serif;
+            background-color: #282828;
+            color: #f1f1f1;
+        }
+        .wrapper{
+            margin-top: 100px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .card{
+            display: grid;
+            justify-items: center;
+            row-gap: 20px;
+            max-width: 450px;
+            word-break: break-all;
+        }
+/*         h2, button{
+            justify-self: center;
+        } */
+        input{
+            border: solid #edd446 1px;
+            font: 1.2rem;
+            color: #edd446;
+            background-color: #282828;
+            font-weight: bold;
+            text-align: center;
+        }
+        button{
+            font-size: 1.2rem;
+            background-color: #edd446;
+            color: #282828;
+            height: 50px;
+            width: 100px;
+            border: none;
+        }
+        button:hover{
+            background-color: #d6bf3f;
+        }
+
+    </style>
 </head>
 <body>
-    <div>
-        <h2>Contador de Números</h2>
-        <label for="inicio">Valor inicial:</label>
-        <input type="number" id="inicio">
-        <label for="final">Valor final:</label>
-        <input type="number" id="final">
-        <input type="button" id="btn" value="Gerar">
-        <div id="res"></div>
+    <div class="wrapper">
+        <div class="card">
+            <h2>Contador de Números</h2>
+            <label for="inicio">Valor inicial:
+                <input type="number" id="inicio">
+            </label>
+            <label for="final">Valor final:
+                <input type="number" id="final">
+            </label>
+            <button id="btn">Gerar</button>
+            <div id="res"><p></p></div>
+        </div>
     </div>
     <script>
         gerar = () =>{
-            var res = window.document.querySelector("div#res")
+            var res = window.document.querySelector("p")
             var inicio = +window.document.querySelector("input#inicio").value
             var final = +window.document.querySelector("input#final").value
 
-            for(i=inicio; i<=final; i++){
+            res.innerHTML = ''
+            if(inicio<final){
+                for(let i=inicio; i<=final; i++){   
                 if(i==final){
                     res.innerHTML += i
                     continue
                 }
                 res.innerHTML += i + ","
             }
+            }else if(inicio>final){
+                for(let i=inicio; i>=final; i--){   
+                if(i==final){
+                    res.innerHTML += i
+                    continue
+                }
+                res.innerHTML += i + ","
+            }
+            }
         } 
-
         window.document.getElementById("btn").addEventListener("click", gerar)
     </script>
 </body>
